@@ -24,8 +24,9 @@ Vector3D cubeVerts[24] = { Vector3D(0.5, -0.5, -0.5), Vector3D(0.5, 0.5, -0.5), 
 						Vector3D(0.5, -0.5, -0.5), Vector3D(0.5, 0.5, -0.5), Vector3D(0.5, 0.5, 0.5), Vector3D(0.5, -0.5, 0.5),
 						Vector3D(-0.5, -0.5, 0.5), Vector3D(-0.5, 0.5, 0.5), Vector3D(-0.5, 0.5, -0.5), Vector3D(-0.5, -0.5, -0.5),
 						Vector3D(0.5, 0.5, 0.5), Vector3D(0.5, 0.5, -0.5), Vector3D(-0.5, 0.5, -0.5), Vector3D(-0.5, 0.5, 0.5),
-						Vector3D(0.5, -0.5, -0.5), Vector3D(0.5, -0.5, 0.5), Vector3D(-0.5, -0.5, 0.5), Vector3D(-0.5, -0.5, -0.5)};
+			     		Vector3D(0.5, -0.5, -0.5), Vector3D(0.5, -0.5, 0.5), Vector3D(-0.5, -0.5, 0.5), Vector3D(-0.5, -0.5, -0.5)};
 
+//[CEHP] - We assign colors to each side of the cube, all in RGB format.
 Vector3D cubeColors[6] = { Vector3D(1.0, 0.0, 0.0), Vector3D(0.0, 1.0, 0.0), Vector3D(0.0, 0.0, 1.0),
 							Vector3D(1.0, 1.0, 0.0), Vector3D(1.0, 0.0, 1.0), Vector3D(0.0, 1.0, 1.0)};
 
@@ -42,6 +43,7 @@ void init(void)
 	glEnable(GL_DEPTH_TEST);
 }
 
+//[CEHP] - We initialize graphics from here, we tell how to draw the cube we created and where.
 void drawCube(Vector3D pos){
 
 	for (int i = 0; i < 6; i++){
